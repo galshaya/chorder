@@ -34,8 +34,9 @@ chorder [-i INPUT_FILE] [-o OUTPUT_FILE] [-t SEMITONES] [-f]
 ### Input Format
 Write your chord chart with chords enclosed in pipe symbols (`|`) where they should appear above the lyrics:
 ```
-|G|I don't want to |C|close my |D|eyes
-|Em|I don't want to |C|fall a|D|sleep
+|D|I don't want to |A|close my eyes|Em|
+I don't want to fall asleep
+'Caue I'd |G|miss you baby
 ```
 
 ### Examples
@@ -74,18 +75,18 @@ chorder -i song.txt -f
 
 Input:
 ```
-|G|I don't want to |C#|close my |D|eyes
+|D|I don't want to |A|close my eyes|Em|
 ```
 
 Output with default sharp notation:
 ```
-G              C#        D
+D               A            Em
 I don't want to close my eyes
 ```
 
-Output with flat notation (-f):
+Output with flat notation ( 1 semitone transposed) (-f):
 ```
-G              Db        D
+Eb              Bb           Fm
 I don't want to close my eyes
 ```
 
