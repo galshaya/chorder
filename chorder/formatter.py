@@ -87,14 +87,20 @@ def format_line(parsed_line: ParsedLine, use_flats: bool = False) -> str:
     if not parsed_line.chords or not parsed_line.lyrics:
         return parsed_line.lyrics
 
-    # Create a chord line of spaces equal to lyrics length
-    chord_line = list(" " * len(parsed_line.lyrics))
+    # Calculate the maximum space needed for the chord line
+    max_pos = 0
+    for chord_pos in parsed_line.chords:
+        chord = convert_to_flat_notation(chord_pos.chord) if use_flats else chord_pos.chord
+        max_pos = max(max_pos, chord_pos.position + len(chord))
+    
+    # Create a chord line with enough space for all chords
+    lyrics_len = max(len(parsed_line.lyrics), max_pos)
+    chord_line = list(" " * lyrics_len)
     
     # Place each chord at its position
     for chord_pos in parsed_line.chords:
         chord = convert_to_flat_notation(chord_pos.chord) if use_flats else chord_pos.chord
-        if chord_pos.position < len(chord_line):
-            chord_line[chord_pos.position:chord_pos.position + len(chord)] = chord
+        chord_line[chord_pos.position:chord_pos.position + len(chord)] = chord
     
     # Return combined output, with trailing spaces removed from chord line
     return f"{''.join(chord_line).rstrip()}\n{parsed_line.lyrics}"

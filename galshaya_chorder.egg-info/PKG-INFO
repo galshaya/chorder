@@ -1,3 +1,24 @@
+Metadata-Version: 2.1
+Name: galshaya-chorder
+Version: 0.1.1
+Summary: A command-line tool for formatting and transposing chord charts
+Home-page: https://github.com/galshaya/chorder
+Author: Gal Shaya
+Author-email: isaiahgal@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Multimedia :: Sound/Audio
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # Chorder
 
 A command-line tool for creating, formatting, and transposing chord charts. This tool helps musicians format their chord charts with proper chord alignment above lyrics and provides useful features like transposition and file handling.

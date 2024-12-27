@@ -4,8 +4,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="chorder",
-    version="0.1.0",
+    name="galshaya-chorder",
+    version="0.1.1",
     author="Gal Shaya",
     author_email='isaiahgal@gmail.com',
     description="A command-line tool for formatting and transposing chord charts",
